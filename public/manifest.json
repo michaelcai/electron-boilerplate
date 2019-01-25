@@ -1,6 +1,6 @@
 {
-  "short_name": "Chainstack",
-  "name": "Chainstack Wallet",
+  "short_name": "Electorn",
+  "name": "Electron Boilerplate",
   "icons": [
     {
       "src": "favicon.ico",
