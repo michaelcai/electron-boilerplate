@@ -15,11 +15,13 @@ configure({
 })
 
 // Configure Devtool
-configureDevtool({
-  logEnabled: true,
-  updatesEnabled: false,
-  logFilter: change => ['reaction', 'action', 'when'].some(type => type === change.type)
-})
+if (process.env.REACT_APP_ENV === 'development') {
+  configureDevtool({
+    logEnabled: true,
+    updatesEnabled: false,
+    logFilter: change => ['reaction', 'action', 'when'].some(type => type === change.type)
+  })
+}
 
 let history: History<any> | MemoryHistory<any>
 if (process.env.REACT_APP_ENV === 'development' && !process.env.IS_RENDERER) {
